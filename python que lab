@@ -1,0 +1,231 @@
+#que 1
+def name():
+    name = str(input("What's Your Name : "))
+    print("Good Afternoon, " + str(name))
+    return
+
+name()
+
+
+
+
+#que 2
+UserName = input("Enter the Name: ")
+Date = input("Enter the Date: ")
+
+letter = '''\nDear <|NAME|>
+You Are Selected!
+Date - <|DATE|>
+'''
+letter = letter.replace("<|NAME|>", UserName)
+letter = letter.replace("<|DATE|>", Date)
+print(letter)
+
+
+
+
+#que 3
+mystring = input("Enter A String -> ")
+mystring = mystring.strip()
+while '  ' in mystring:
+    mystring = mystring.replace('  ', ' ')
+print("After Replacing: ")
+print("\t{}".format(mystring))
+
+
+
+#que 4
+fruits = []
+x = 1
+while(len(fruits) < 7):
+    fruits.append(input("Enter Fruit Number " + str(x) + " : "))
+    x += 1
+print("Your Created List Are : ")
+print(fruits)
+
+
+
+#que 5
+m1 = int(input("Enter The Marks Of 1st Student : "))
+m2 = int(input("Enter The Marks Of 2nd Student : "))
+m3 = int(input("Enter The Marks Of 3rd Student : "))
+m4 = int(input("Enter The Marks Of 4th Student : "))
+m5 = int(input("Enter The Marks Of 5th Student : "))
+m6 = int(input("Enter The Marks Of 6th Student : "))
+print()
+SortedMarks = [m1, m2, m3, m4, m5, m6]
+SortedMarks.sort()
+print('\t\t'"Sorted Marks: ")
+print(SortedMarks)
+
+
+
+#que 6
+a = (7, 0, 8, 0, 0, 9)
+anew = a.count(0)
+print('\t'"Given Tuple: ", a)
+print('\t'"Number Of Zeroes In Tuple: ", anew)
+
+
+#que 7
+Dict = {
+    "kitaab":"Book",
+    "ghadi":"Watch",
+    "pankha" : "Fan", 
+    "aacha" : "Good",
+    "vishaal" : "Huge"
+}
+
+print("Dictionary Has Option : ", Dict.keys())
+userWord = input("\nEnter The Hindi Word: ")
+print("\tThe English Word Is :",Dict[userWord],)
+
+
+
+#que 8
+n1 = int(input("Enter The Number 1 : "))
+n2 = int(input("Enter The Number 2 : "))
+n3 = int(input("Enter The Number 3 : "))
+n4 = int(input("Enter The Number 4 : "))
+n5 = int(input("Enter The Number 5 : "))
+n6 = int(input("Enter The Number 6 : "))
+n7 = int(input("Enter The Number 7 : "))
+n8 = int(input("Enter The Number 8 : "))
+myset = {n1, n2, n3, n4, n5, n6, n7, n8}
+print("\tUnique Numbers Are :",myset)
+
+
+
+
+#que 9
+myset = set()
+myset.add(20)
+myset.add(20.0)
+myset.add("20")
+
+print("\tLength of Set is :",len(myset))
+
+
+
+#que 11
+text = input("Enter The comment : ")
+isSpam = False
+
+if("buy now" in text):
+    isSpam = True
+elif("make a lot of money" in text):
+    isSpam = True
+elif("subscribe this" in text):
+    isSpam = True
+elif("click this" in text):
+    isSpam = True
+
+if(isSpam == True):
+    print("\n*****This Is An Spam comment !!!*****")
+else:
+    print("\n*****This Is Not An Spam comment*****")
+
+
+
+
+
+#que 12
+UserName = input("Enter The UserName : ")
+length = len(UserName)
+if(length > 10):
+print("\t***length Of UserName should not be Greater Than 10 !!!***")
+else:
+    print("\t*****UserName Is Accepted*****")
+
+
+
+
+
+#que 13
+
+post = input("Enter Your Post Here : ")
+post = post.lower()
+
+if("Simarjeet".lower() in post):
+    print("\t***This Post Is Talking About Simarjeet***")
+else:
+    print("\t***This Post Is Not Talking About Simarjeet***")
+
+
+#que 14
+L1 = ["Simarjeet", "Sohan", "Sachin", "Rahul"]
+for name in L1:
+    if name.startswith("S"):
+        print("Hi "+name)
+
+
+
+#que 15
+
+n = int(input("Enter The Number : "))
+isPrime = True
+for i in range(2, n):
+    if(n % i == 0):
+        isPrime = False
+        break
+
+if(isPrime == True):
+    print("\nThis Number Is Prime Number")
+else:
+    print("\nThis Number Is Not Prime Number")
+
+
+
+
+
+
+#que 16
+
+def GreatestOfThree(n1, n2, n3):
+    if(n1 > n2):
+        g = n1
+    else:
+        g = n2
+
+    if(n3 > g):
+        g = n3
+    return g
+
+n1 = int(input("Enter The Number 1 : "))
+n2 = int(input("Enter The Number 2 : "))
+n3 = int(input("Enter The Number 3 : "))
+print("\nThe Greatest Number Is : ", GreatestOfThree(n1, n2, n3))
+
+
+
+
+#que 17
+print('\t\t'"Printing With New Line")
+print("Hello")
+print("Hello")
+print('\t\t'"Printing Without New Line"'\n')
+print("Hello", end=" ")
+print("Hello", end=" ")
+
+
+
+#que 18
+num = int(input("Enter The Number : "))
+sumn = 0
+i = 0
+
+while range(i, num+1):
+    sumn = sumn + i
+    i = i + 1
+print(f"\nThe Sum of First {num} Number Is : ", sumn)
+
+
+
+#que 19
+def remove_Split(string, word):
+    string = string.replace(word, "")
+    print(string.strip())
+
+sentence = "        Hello everyone New       "
+
+remove_Split(sentence, "New")
